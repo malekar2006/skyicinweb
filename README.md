@@ -28,10 +28,13 @@ npm start
 
 ## إعداد Supabase
 
-1. أنشئ مشروع Supabase.
-2. نفّذ الملف `supabase/migrations/001_initial_schema.sql`.
-3. انسخ `.env.example` إلى `.env`.
-4. أضف مفاتيح المشروع محليًا فقط، ولا ترفع `.env` إلى Git.
+نفّذ ملفات الترحيل بالترتيب من SQL Editor:
+
+1. `supabase/migrations/001_initial_schema.sql`
+2. `supabase/migrations/002_security_accounting.sql`
+3. `supabase/migrations/003_rls_policies.sql`
+
+انسخ `.env.example` إلى `.env` عند التشغيل المحلي. استخدم `NEXT_PUBLIC_SUPABASE_URL` و`NEXT_PUBLIC_SUPABASE_ANON_KEY` في الواجهة فقط. لا تضع `SUPABASE_SERVICE_ROLE_KEY` في المتصفح أو Git.
 
 ## قواعد البيانات
 
