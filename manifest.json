@@ -1,0 +1,59 @@
+{
+  "name": "سكاي آيكون - النظام المحاسبي المتكامل",
+  "short_name": "سكاي آيكون",
+  "description": "نظام محاسبي متكامل لإدارة وكالات السفر والسياحة وخدمات الحج والعمرة",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#f57c00",
+  "orientation": "portrait-primary",
+  "dir": "rtl",
+  "lang": "ar",
+  "scope": "/",
+  "icons": [
+    {
+      "src": "images/logo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "images/logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["business", "finance", "productivity"],
+  "shortcuts": [
+    {
+      "name": "لوحة التحكم",
+      "short_name": "الرئيسية",
+      "description": "الوصول السريع إلى لوحة التحكم",
+      "url": "/index.html#dashboard",
+      "icons": [{ "src": "images/logo.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "الفواتير",
+      "short_name": "فواتير",
+      "description": "إدارة الفواتير",
+      "url": "/index.html#invoices",
+      "icons": [{ "src": "images/logo.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "التقارير",
+      "short_name": "تقارير",
+      "description": "عرض التقارير المالية",
+      "url": "/index.html#reports",
+      "icons": [{ "src": "images/logo.png", "sizes": "96x96" }]
+    }
+  ],
+  "prefer_related_applications": false,
+  "related_applications": [],
+  "splash_screens": [
+    {
+      "src": "images/logo.png",
+      "sizes": "2048x2048"
+    }
+  ]
+}

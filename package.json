@@ -1,0 +1,110 @@
+{
+  "name": "sky-icon-accounting-system",
+  "productName": "سكاي آيكون - النظام المحاسبي المتكامل",
+  "version": "3.6.0",
+  "description": "نظام محاسبي متكامل لإدارة وكالات السفر والسياحة وخدمات الحج والعمرة",
+  "main": "electron-main.js",
+  "author": {
+    "name": "Sky Icon Travel & Tourism",
+    "email": "admin@skyicon.com"
+  },
+  "license": "Proprietary",
+  "homepage": "https://skyicon.com",
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron . --dev",
+    "build": "electron-builder",
+    "build:win": "electron-builder --win",
+    "build:mac": "electron-builder --mac",
+    "build:linux": "electron-builder --linux",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "devDependencies": {
+    "electron": "^27.0.0",
+    "electron-builder": "^24.6.4"
+  },
+  "build": {
+    "appId": "com.skyicon.accounting",
+    "productName": "سكاي آيكون",
+    "copyright": "Copyright © 2024 Sky Icon Travel & Tourism",
+    "directories": {
+      "output": "dist",
+      "buildResources": "build"
+    },
+    "files": [
+      "**/*",
+      "!dist",
+      "!node_modules",
+      "!**/*.md",
+      "!**/test/**"
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64",
+            "ia32"
+          ]
+        },
+        {
+          "target": "portable",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "icon": "images/logo.png",
+      "requestedExecutionLevel": "asInvoker"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "سكاي آيكون",
+      "artifactName": "${productName}-Setup-${version}.${ext}",
+      "deleteAppDataOnUninstall": false,
+      "runAfterFinish": true,
+      "installerIcon": "images/logo.png",
+      "uninstallerIcon": "images/logo.png",
+      "installerHeaderIcon": "images/logo.png",
+      "language": "1025"
+    },
+    "portable": {
+      "artifactName": "${productName}-Portable-${version}.${ext}"
+    },
+    "mac": {
+      "target": [
+        "dmg",
+        "zip"
+      ],
+      "category": "public.app-category.business",
+      "icon": "images/logo.png"
+    },
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb"
+      ],
+      "category": "Office",
+      "icon": "images/logo.png"
+    }
+  },
+  "keywords": [
+    "accounting",
+    "travel",
+    "tourism",
+    "hajj",
+    "umrah",
+    "invoices",
+    "vouchers",
+    "bookings",
+    "محاسبة",
+    "سفريات",
+    "سياحة",
+    "حج",
+    "عمرة"
+  ]
+}
