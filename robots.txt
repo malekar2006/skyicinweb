@@ -1,0 +1,13 @@
+# Robots.txt - Sky Icon Travel & Tourism System
+# نظام سكاي آيكون للسفريات والسياحة
+
+User-agent: *
+Disallow: /js/
+Disallow: /css/
+Disallow: /*.md
+Disallow: /test-*.html
+Allow: /
+Allow: /index.html
+
+# Sitemap
+Sitemap: https://yourdomain.com/sitemap.xml

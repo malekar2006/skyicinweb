@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="نظام محاسبي متكامل لإدارة وكالات السفر والسياحة وخدمات الحج والعمرة">
+    <meta name="keywords" content="سكاي آيكون,محاسبة,سفريات,سياحة,حج,عمرة">
+    <meta name="author" content="Sky Icon Travel & Tourism">
+    <meta name="theme-color" content="#f57c00">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="سكاي آيكون">
+    
+    <title>سكاي آيكون - النظام المحاسبي المتكامل</title>
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json">
+    
+    <!-- Icons -->
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <link rel="apple-touch-icon" href="images/logo.png">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/modules.css">
+    <link rel="stylesheet" href="css/smart-system.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+        <div class="logo-container">
+            <div class="logo-icon">
+                <i class="fas fa-plane-departure"></i>
+            </div>
+            <h2 class="logo-text">سكاي آيكون</h2>
+        </div>
+        
+        <nav class="nav-menu">
+            <a href="#" class="nav-item active" data-page="dashboard">
+                <i class="fas fa-home"></i>
+                <span>لوحة التحكم</span>
+            </a>
+            <a href="#" class="nav-item" data-page="accounts">
+                <i class="fas fa-sitemap"></i>
+                <span>شجرة الحسابات</span>
+            </a>
+            <a href="#" class="nav-item" data-page="journal">
+                <i class="fas fa-book"></i>
+                <span>القيود المحاسبية</span>
+            </a>
+            <a href="#" class="nav-item" data-page="invoices">
+                <i class="fas fa-file-invoice"></i>
+                <span>الفواتير</span>
+            </a>
+            <a href="#" class="nav-item" data-page="vouchers">
+                <i class="fas fa-receipt"></i>
+                <span>السندات</span>
+            </a>
+            <a href="#" class="nav-item" data-page="bookings">
+                <i class="fas fa-ticket-alt"></i>
+                <span>الحجوزات</span>
+            </a>
+            <a href="#" class="nav-item" data-page="customers">
+                <i class="fas fa-users"></i>
+                <span>العملاء</span>
+            </a>
+            <a href="#" class="nav-item" data-page="suppliers">
+                <i class="fas fa-truck"></i>
+                <span>الموردين</span>
+            </a>
+            <a href="#" class="nav-item" data-page="passports">
+                <i class="fas fa-passport"></i>
+                <span>الجوازات المرسلة</span>
+            </a>
+            <a href="#" class="nav-item" data-action="followup">
+                <i class="fas fa-clipboard-check"></i>
+                <span>المتابعة</span>
+            </a>
+            <a href="#" class="nav-item" data-page="reports">
+                <i class="fas fa-chart-bar"></i>
+                <span>التقارير المالية</span>
+            </a>
+            <a href="#" class="nav-item" data-action="customer-statements">
+                <i class="fas fa-file-invoice-dollar"></i>
+                <span>كشف حساب عميل</span>
+            </a>
+            <a href="#" class="nav-item" data-action="all-customers-statements">
+                <i class="fas fa-users"></i>
+                <span>كشف حساب جميع العملاء</span>
+            </a>
+            <a href="#" class="nav-item" data-action="supplier-statements">
+                <i class="fas fa-file-invoice"></i>
+                <span>كشف حساب مورد</span>
+            </a>
+            <a href="#" class="nav-item" data-action="all-suppliers-statements">
+                <i class="fas fa-truck"></i>
+                <span>كشف حساب جميع الموردين</span>
+            </a>
+            <a href="#" class="nav-item" data-action="users">
+                <i class="fas fa-users-cog"></i>
+                <span>إدارة المستخدمين</span>
+            </a>
+            <a href="#" class="nav-item" data-action="activity">
+                <i class="fas fa-history"></i>
+                <span>سجل النشاط</span>
+            </a>
+            <a href="#" class="nav-item" data-action="statistics">
+                <i class="fas fa-chart-line"></i>
+                <span>إحصائيات المستخدمين</span>
+            </a>
+            <a href="#" class="nav-item" data-action="search">
+                <i class="fas fa-search-plus"></i>
+                <span>الاستعلام المتقدم</span>
+            </a>
+            <a href="#" class="nav-item" data-action="service-pricing">
+                <i class="fas fa-tags"></i>
+                <span>تسعير الخدمات</span>
+            </a>
+            <a href="#" class="nav-item" data-action="currency">
+                <i class="fas fa-coins"></i>
+                <span>إدارة العملات</span>
+            </a>
+            <a href="#" class="nav-item" data-page="settings">
+                <i class="fas fa-cog"></i>
+                <span>الإعدادات</span>
+            </a>
+            <a href="#" class="nav-item nav-logout" onclick="logout(); return false;">
+                <i class="fas fa-sign-out-alt"></i>
+                <span>تسجيل الخروج</span>
+            </a>
+        </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Header -->
+        <header class="header">
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="header-title">
+                <h1 id="pageTitle">لوحة التحكم</h1>
+            </div>
+            <div class="header-actions">
+                <button class="btn-icon notification-btn" data-action="notifications" title="الإشعارات">
+                    <i class="fas fa-bell"></i>
+                    <span class="notification-badge">3</span>
+                </button>
+                <button class="btn-icon" data-action="profile" title="الملف الشخصي">
+                    <i class="fas fa-user"></i>
+                </button>
+            </div>
+        </header>
+
+        <!-- Content Area -->
+        <div class="content" id="content">
+            <!-- Pages will be loaded here -->
+        </div>
+        <div class="content" id="mainContent" style="display: none;">
+            <!-- Modules content will be loaded here -->
+        </div>
+    </main>
+
+    <!-- Scripts -->
+    <script src="js/auth.js"></script>
+    <script src="js/reset-admin.js"></script>
+    <script src="js/currency.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/validation.js"></script>
+    <script src="js/currency-filter.js"></script>
+    <script src="js/currency-manager.js"></script>
+    <script src="js/multi-currency-reports.js"></script>
+    <script src="js/auto-posting.js"></script>
+    <script src="js/smart-descriptions.js"></script>
+    <script src="js/service-pricing.js"></script>
+    <script src="js/smart-validations.js"></script>
+    <script src="js/customer-statements.js"></script>
+    <script src="js/supplier-statements.js"></script>
+    <script src="js/all-customers-statements.js"></script>
+    <script src="js/all-suppliers-statements.js"></script>
+    <script src="js/dashboard.js"></script>
+    <script src="js/accounts.js"></script>
+    <script src="js/journal.js"></script>
+    <script src="js/invoices.js"></script>
+    <script src="js/vouchers.js"></script>
+    <script src="js/bookings.js"></script>
+    <script src="js/customers.js"></script>
+    <script src="js/suppliers.js"></script>
+    <script src="js/sent-passports.js"></script>
+    <script src="js/follow-up.js"></script>
+    <script src="js/reports.js"></script>
+    <script src="js/settings.js"></script>
+    <script src="js/currency-management.js"></script>
+    <script src="js/print.js"></script>
+    <script src="js/notifications.js"></script>
+    <script src="js/profile.js"></script>
+    <script src="js/users-management.js"></script>
+    <script src="js/activity-log.js"></script>
+    <script src="js/advanced-search.js"></script>
+    
+    <!-- Service Worker Registration -->
+    <script>
+        // تسجيل Service Worker للعمل بدون إنترنت
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(registration => {
+                        console.log('✅ Service Worker registered successfully:', registration.scope);
+                        
+                        // التحقق من التحديثات
+                        registration.addEventListener('updatefound', () => {
+                            const newWorker = registration.installing;
+                            newWorker.addEventListener('statechange', () => {
+                                if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+                                    // إظهار إشعار بوجود تحديث
+                                    if (confirm('يوجد تحديث جديد للنظام. هل تريد تحديث الصفحة؟')) {
+                                        newWorker.postMessage({ type: 'SKIP_WAITING' });
+                                        window.location.reload();
+                                    }
+                                }
+                            });
+                        });
+                    })
+                    .catch(error => {
+                        console.error('❌ Service Worker registration failed:', error);
+                    });
+                    
+                // التحديث التلقائي عند تغيير Service Worker
+                navigator.serviceWorker.addEventListener('controllerchange', () => {
+                    window.location.reload();
+                });
+            });
+        }
+        
+        // دعم PWA - عرض رسالة التثبيت
+        let deferredPrompt;
+        window.addEventListener('beforeinstallprompt', (e) => {
+            e.preventDefault();
+            deferredPrompt = e;
+            
+            // عرض زر التثبيت (يمكن إضافة UI هنا)
+            console.log('📱 يمكن تثبيت التطبيق');
+        });
+        
+        // معالجة التثبيت
+        window.addEventListener('appinstalled', () => {
+            console.log('✅ تم تثبيت التطبيق بنجاح');
+            deferredPrompt = null;
+        });
+    </script>
+</body>
+</html>
